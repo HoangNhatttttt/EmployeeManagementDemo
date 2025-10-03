@@ -1,0 +1,64 @@
+* Project sử dụng Netbeans IDE 27 và Java SDK 21
+
+I. Setup database
+	1. Tải và cài đặt XAMPP 8
+	2. Chạy server Apache và MySQL từ XAMPP
+	3. Vào url "http://localhost/phpmyadmin/"
+	4. Tạo database tên "employeedemo" sử dụng nút New ở menu bên trái
+	5. Vào database mới tạo, nhấn "Import" ở thanh menu trên cùng, chọn file "employees.sql" rồi import
+
+II. Setup project
+	1. Sử dụng Netbeans IDE, chọn Import (hoặc Open) project, chọn folder chứa Project
+	2. Nhấn RUN project
+
+	* Nếu project bị lỗi "The POM for unknown.binary:AbsoluteLayout:jar:SNAPSHOT is missing, no dependency information available"
+	1. Vào file "pom.xml"
+	2. Sửa đoạn code sau đây:
+
+		<dependency>
+			<groupId>unknown.binary</groupId>
+			<artifactId>AbsoluteLayout</artifactId>
+			<version>SNAPSHOT</version>
+		</dependency>
+		
+		thành:
+		
+		<dependency>
+			<groupId>org.netbeans.external</groupId>
+			<artifactId>AbsoluteLayout</artifactId>
+			<version>RELEASE110</version>
+		</dependency>
+
+
+
+	III. Cách sử dụng GUI
+	a. Hiển thị thông tin nhân viên
+		- Nhấn chọn nhân viên cần hiển thị thông tin trên "Employees list"
+		- Thông tin nhân viên sẽ hiển thị trên "Employee information"
+	
+	b. Thêm nhân viên:
+		1. Bấm nút "New" (khi mục ID có số)
+		2. Nhập thông tin nhân viên vào "Employee information"
+			- Không chứa kí tự đặc biệt
+			- Không bắt đầu bằng dấu whitespace
+			- Age và Salary là số
+			- Tuổi Age trong khoảng 18 - 70
+			- Salary phải > 0
+			- Phone numbers bắt đầu bằng số "0", có độ dài 8-10 số
+			- Các mục còn lại sử dụng chữ
+		3. Nhấn nút Add
+		4. Kiểm tra nhân viên có thêm vào bảng "Employees list"
+
+	c. Sửa thông tin nhân viên
+		1. Nhấn vào dòng của nhân viên cần sửa
+		2. Sửa thông tin trên "Employee information"
+		3. Nhấn nút "Edit"
+		4. Kiểm tra thông tin nhân viên có cập nhật trên bảng "Employees list"
+
+	d. Xoá nhân viên
+		1. Nhấn vào dòng của nhân viên cần xoá
+		2. Nhấn nút "Delete"
+		3. Kiểm tra viên có được xoá khỏi bảng "Employees list"
+		
+	e. Cập nhật bảng "Employee list"
+		Nhấn nút "Update"
