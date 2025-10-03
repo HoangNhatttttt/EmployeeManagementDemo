@@ -1,1 +1,1 @@
-Đọc file "Hướng dẫn sử dụng" để biết cách setup project  
+Đọc file "Hướng dẫn sử dụng" để biết cách setup project
