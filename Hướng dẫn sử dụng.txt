@@ -11,26 +11,6 @@ II. Setup project
 	1. Sử dụng Netbeans IDE, chọn Import (hoặc Open) project, chọn folder chứa Project
 	2. Nhấn RUN project
 
-	* Nếu project bị lỗi "The POM for unknown.binary:AbsoluteLayout:jar:SNAPSHOT is missing, no dependency information available"
-	1. Vào file "pom.xml"
-	2. Sửa đoạn code sau đây:
-
-		<dependency>
-			<groupId>unknown.binary</groupId>
-			<artifactId>AbsoluteLayout</artifactId>
-			<version>SNAPSHOT</version>
-		</dependency>
-		
-		thành:
-		
-		<dependency>
-			<groupId>org.netbeans.external</groupId>
-			<artifactId>AbsoluteLayout</artifactId>
-			<version>RELEASE110</version>
-		</dependency>
-
-
-
 	III. Cách sử dụng GUI
 	a. Hiển thị thông tin nhân viên
 		- Nhấn chọn nhân viên cần hiển thị thông tin trên "Employees list"
